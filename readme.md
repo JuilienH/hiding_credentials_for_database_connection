@@ -12,12 +12,17 @@ We want to hide the credential in a shared space, we need to set envrionment var
 
 Steps: Here is how to do it in the Terminal
 1. First, to figure out which shell you are running 
+
 echo $SHELL
 It will give an output like this:
 /bin/zsh
+
 2. And then use the command export to define the environment variable (KEY) and its actual value that you want to hide eventually
+
 export KEY=value
-3. Once this is done, simply type the following and it should return the value you jsut set
+
+3. Once this is done, simply type the following and it should return the value you just set
+
 eho $KEY
 
 In the python file storing self-defined functions, we can use connection=psycopg2.connect(
