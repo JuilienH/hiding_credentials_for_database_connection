@@ -1,16 +1,16 @@
 # Envrionment variables for hiding credentials used to connect to the database
-Example:
+## Example:
 database: postgreSQL
 python library used to connect: psycopg2
 
-Background:
+## Background:
 The stem script for psycopg2.coonect is like 
 conn=psycopg2.connect(host="real_host_info",user="real_user_name",dbname="real_db_name", password="the_password").
 
-Purpose:
+## Purpose:
 We want to hide the credential in a shared space, we need to set envrionment variables to store them, and in the code, you just need to get the environment variables to let the system autofill them in.
 
-Steps: Here is how to do it in the Terminal
+## Steps: Here is how to do it in the Terminal
 1. First, to figure out which shell you are running 
 
 echo $SHELL
@@ -25,6 +25,5 @@ export KEY=value
 
 eho $KEY
 
-In the python file storing self-defined functions, we can use connection=psycopg2.connect(
-            **params) 
+In the python file storing self-defined functions, we can use connection=psycopg2.connect(**params) 
 rather than the full info inside connect().
