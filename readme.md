@@ -25,5 +25,6 @@ export KEY=value
 
 eho $KEY
 
+## Usage
 In the python file storing self-defined functions, we can use connection=psycopg2.connect(**params) 
 rather than the full info inside connect().
